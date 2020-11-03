@@ -20,4 +20,3 @@ export interface Event {
     browser: browser;
     geolocation: GeoLocation;
   }
-  

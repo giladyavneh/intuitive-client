@@ -20,3 +20,11 @@ export interface Event {
     browser: browser;
     geolocation: GeoLocation;
   }
+
+  export interface weeklyRetentionObject {
+    registrationWeek:number;
+    newUsers:number;
+    weeklyRetention:number[];
+    start:string;
+    end:string
+  }

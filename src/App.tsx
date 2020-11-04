@@ -7,6 +7,7 @@ import SessionsByDayTile from './SessionsByDayTile';
 import GeoLocationTile from './GeoLocationTile';
 import { Event } from "./models/event";
 import SessionsByHoursTile from './SessionsByHoursTile';
+import Retention from './charts/Retention';
 dotenv.config()
 
 
@@ -67,9 +68,10 @@ let mockGeo:Event[]=[
 function App() {
   return (
     <div className="App">
-      <SessionsByDayTile/>
+      {/* <SessionsByDayTile/>
       <SessionsByHoursTile/>
-      <GeoLocationTile data={mockGeo}/>
+      <GeoLocationTile data={mockGeo}/> */}
+      <Retention/>
     </div>
   );
 }

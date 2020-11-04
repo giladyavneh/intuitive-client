@@ -49,3 +49,28 @@ export const SizeController=styled.div`
     /* border-radius:40%; */
     cursor: se-resize;
 `
+interface RetentionStyledProps{
+    maxWeeks:number
+}
+
+interface PrecentageTileProps{
+    precentage:number
+}
+
+export const RetentionWrapper=styled.div`
+    display:grid;
+    grid-template-columns:fit-content auto;
+`
+
+export const RetentionRightSide=styled.div<RetentionStyledProps>`
+    display:grid;
+    grid-template-columns:repeat(${props=>props.maxWeeks}, auto);
+    grid-gap:5px;
+`
+export const PrecentageTile=styled.div<PrecentageTileProps>`
+    height:40px;
+    background-color: ${props=>{
+        let op=props.precentage/100
+        return `rgba(0,0,160, ${op})`}};
+    
+`

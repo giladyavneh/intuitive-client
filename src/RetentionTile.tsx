@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import IntuitiveTile from "./reusables/IntuitiveTile";
-import { Event } from "./models/event";
+import { Event, weeklyRetentionObject } from "./models/event";
 import Retention from "./charts/Retention";
 
 let mockRetention=[
@@ -78,9 +78,13 @@ let mockRetention=[
   ]
   
 const RetentionTile:React.FC = () => {
-  return (
+    const [data, setData]=useState<weeklyRetentionObject[]>([])
+    useEffect(()=>{
+        setData(mockRetention)
+    },[])
+    return (    
     <IntuitiveTile color="teal" tileName="Weekly Retention">
-      <Retention height={800} width={400} data={mockRetention} />
+      <Retention height={800} width={400} data={data} />
     </IntuitiveTile>
   );
 };

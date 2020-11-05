@@ -9,6 +9,8 @@ import { Event } from "./models/event";
 import SessionsByHoursTile from './SessionsByHoursTile';
 import Retention from './charts/Retention';
 import RetentionTile from './RetentionTile';
+import EventLog from './reusables/EventLog';
+import EventLogs from './charts/EventLogs';
 dotenv.config()
 
 
@@ -144,8 +146,9 @@ function App() {
     <div className="App">
       {/* <SessionsByDayTile/>
       <SessionsByHoursTile/>
-      <GeoLocationTile data={mockGeo}/> */}
-      <RetentionTile/>
+      <GeoLocationTile data={mockGeo}/>
+      <RetentionTile/> */}
+      <EventLogs height={400} width={800} data={mockGeo}></EventLogs>
     </div>
   );
 }

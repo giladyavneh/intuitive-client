@@ -1,4 +1,5 @@
 import React, { ReactChild, ReactElement, useEffect, useRef, useState } from "react";
+import ErrorBoundary from "../ErrorBoundries";
 import {FilterBoard, Frame, FrameHeader, SizeController} from "./StyledComponents"
 
 interface IntuitiveTileProps{
@@ -36,13 +37,17 @@ const IntuitiveTile:React.FC<IntuitiveTileProps>=({color, tileName, children})=>
     }
     return (
         <Frame color={color} ref={Self}>
+            
             <FrameHeader color={color}>
                 {tileName}
             </FrameHeader>
+            <ErrorBoundary height={height} width={width}>
             <FilterBoard/>
             <div>
                 {chart}
             </div>
+            
+            </ErrorBoundary>
             <SizeController color={color} onDrag={resize}></SizeController>
         </Frame>
     )

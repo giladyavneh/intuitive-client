@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import IntuitiveTile from "./IntuitiveTile";
+import EventLogs from "../charts/EventLogs";
 
 interface FrameHeaderProps{
     textColor?:string
@@ -68,10 +68,45 @@ export const RetentionWrapper=styled.div<RetentionWrapperProps>`
     grid-gap:3px;
 `
 export const PrecentageTile=styled.div<PrecentageTileProps>`
+    font-size:1em;
     background-color: ${props=>{
         let op=props.precentage/100
         return `rgba(0,0,160, ${op})`}};
 `
 export const GrayTile=styled.div`
+    font-size:1em;
     background-color: rgba(0,0,0,0.25);
+`
+interface EventLogsProps{
+    height:number;
+    width:number;
+}
+
+export const EventLogsWrapper=styled.div<EventLogsProps>`
+    height:${props=>props.height}px;
+    width:${props=>props.width}px;
+    overflow-y:scroll;
+`
+interface logContainerProps{
+    open:boolean;
+}
+
+export const EventLogContainer=styled.div<logContainerProps>`
+    text-align:left;
+    max-height:${props=>props.open?30:400}px;
+    transition: 300ms ease-out;
+    overflow-y: hidden;
+`
+
+export const EventLogHeader=styled.div`
+    display:grid;
+    grid-template-columns:15px 1fr 1fr 15px;
+    height:30px;
+    grid-gap:10px;
+`
+
+export const EventTable=styled.div`
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-gap:10px;
 `

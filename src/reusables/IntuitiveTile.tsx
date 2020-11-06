@@ -28,7 +28,7 @@ const IntuitiveTile:React.FC<IntuitiveTileProps>=({color, tileName, children})=>
             let {top,left}=Self.current.getBoundingClientRect()
             let {clientX, clientY}=e
             if (clientX!==0||clientY!==0){
-                console.log({left,top})
+
                 setWidth(clientX-left)
                 setHeight(clientY-top)
             }

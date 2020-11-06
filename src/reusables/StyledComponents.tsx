@@ -92,21 +92,33 @@ interface logContainerProps{
 }
 
 export const EventLogContainer=styled.div<logContainerProps>`
+    background-color:#a4c7c7;
+    border-radius:5px;
+    margin: 10px 5px;
     text-align:left;
-    max-height:${props=>props.open?30:400}px;
+    max-height:${props=>props.open?400:30}px;
     transition: 300ms ease-out;
-    overflow-y: hidden;
+    overflow: hidden;
 `
 
 export const EventLogHeader=styled.div`
+    background-color:#629e9e;
     display:grid;
-    grid-template-columns:15px 1fr 1fr 15px;
+    grid-template-columns:30px 1fr 1fr 15px;
     height:30px;
     grid-gap:10px;
+    overflow: hidden;
 `
 
 export const EventTable=styled.div`
     display:grid;
     grid-template-columns:repeat(4, 1fr);
     grid-gap:10px;
+    overflow: hidden;
+`
+
+export const UserMarker=styled.div`
+    margin:5px;
+    border-radius:50%;
+    background-color:red;
 `

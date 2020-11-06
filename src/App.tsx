@@ -11,6 +11,7 @@ import Retention from './charts/Retention';
 import RetentionTile from './RetentionTile';
 import EventLog from './reusables/EventLog';
 import EventLogs from './charts/EventLogs';
+import EventLogsTile from './EventLogsTiles';
 dotenv.config()
 
 
@@ -144,11 +145,11 @@ let mockRetention=[
 function App() {
   return (
     <div className="App">
-      {/* <SessionsByDayTile/>
+      <SessionsByDayTile/>
       <SessionsByHoursTile/>
       <GeoLocationTile data={mockGeo}/>
-      <RetentionTile/> */}
-      <EventLogs height={400} width={800} data={mockGeo}></EventLogs>
+      <RetentionTile/>
+      <EventLogsTile/>
     </div>
   );
 }

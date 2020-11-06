@@ -42,7 +42,7 @@ const IntuitiveTile:React.FC<IntuitiveTileProps>=({color, tileName, children})=>
                 {tileName}
             </FrameHeader>
             <ErrorBoundary height={height} width={width}>
-            <FilterBoard/>
+            <FilterBoard></FilterBoard>
             <div>
                 {chart}
             </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+
 import IntuitiveTile from './reusables/IntuitiveTile';
 import Map from "./charts/Map"
 import dotenv from "dotenv"

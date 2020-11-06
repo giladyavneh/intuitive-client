@@ -15,15 +15,14 @@ const EventLog:React.FC<EventLogProps>=({event, reffed, fetchData})=>{
       if (observer.current as IntersectionObserver) observer.current?.disconnect()
     observer.current= new IntersectionObserver(enteries=>{
       if (enteries[0].isIntersecting){
+        // console.log('v')
         // setLoad(false)
         fetchData()
-      
       }
     })
     if (node) observer.current?.observe(node)
-    console.log(observer)
   }, []);
-
+    
     return (
         <EventLogContainer open={open} ref={reffed?lastLog:null}>
             <EventLogHeader>

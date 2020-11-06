@@ -3,44 +3,6 @@ import { EventLogsWrapper } from "../reusables/StyledComponents";
 import { Event } from "../models/event";
 import EventLog from "../reusables/EventLog";
 
-let mockGeo: Event[] = [
-  
-  
-  {
-    _id: "PeXMEptFWao",
-    session_id: "4cc054eb-a77e-4381-b6d9-158ea0ecd6c0",
-    name: "signup",
-    distinct_user_id: "ILMcLjORs9",
-    date: 1601717780742,
-    os: "linux",
-    browser: "ie",
-    geolocation: {
-      location: {
-        lat: 66,
-        lng: 129,
-      },
-      accuracy: 48,
-    },
-    url: "http://localhost3000/signup",
-  },
-  {
-    _id: "XXA15yu4goc",
-    session_id: "bf87680f-3e65-495c-90e8-091f95024287",
-    name: "signup",
-    distinct_user_id: "RZTx223nP2",
-    date: 1603699632302,
-    os: "other",
-    browser: "ie",
-    geolocation: {
-      location: {
-        lat: 35,
-        lng: 88,
-      },
-      accuracy: 26,
-    },
-    url: "http://localhost3000/signup",
-  },
-];
 
 interface EventLogs {
   height: number;
